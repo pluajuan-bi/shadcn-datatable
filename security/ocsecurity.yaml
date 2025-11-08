@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: cicd-service-account-dt
+  namespace: pluaj-dev-dev
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: cicd-binding-dt
+  namespace: pluaj-dev-dev
+subjects:
+- kind: ServiceAccount
+  name: cicd-service-account-dt
+  namespace: pluaj-dev-dev
+roleRef:
+  kind: ClusterRole
+  name: edit
+  apiGroup: rbac.authorization.k8s.io
