@@ -39,7 +39,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: servie-shadcn-data-table
+  name: service-shadcn-data-table
   namespace: pluaj-dev-dev  # Asegúrate de que coincida con tu Deployment
 spec:
   selector:
