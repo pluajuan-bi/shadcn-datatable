@@ -41,7 +41,7 @@ spec:
       volumes:
         - name: datos
           persistentVolumeClaim:
-            claimName: pi mi-pvc-dt
+            claimName: mi-pvc-dt
 ---
 apiVersion: v1
 kind: Service
