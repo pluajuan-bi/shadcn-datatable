@@ -35,6 +35,13 @@ spec:
                 name: mi-configmap
             - secretRef:
                 name: mi-secret
+          volumeMounts:
+            - name: datos
+              mount: /app/datos-dt
+      volumes:
+        - name: datos
+          persistentVolumeClaim:
+            claimName: pi mi-pvc-dt
 ---
 apiVersion: v1
 kind: Service
