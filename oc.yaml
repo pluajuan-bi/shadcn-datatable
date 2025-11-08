@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: container-shadcn-data-table
-          image: juangrp/shadcn-datable:build-{{ tag }}   # Ajusta si subes a Docker Hub
+          image: juangrp/shadcn-datatable-practica:build-{{ tag }}   # Ajusta si subes a Docker Hub
           imagePullPolicy: Always
           ports:
             - name: http
