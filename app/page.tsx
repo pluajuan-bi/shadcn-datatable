@@ -1,29 +1,12 @@
-'use client';
-import { Button } from "@/components/ui/button";
-import { UsersDataTable } from "@/components/users-data-table"
-import { Users } from "lucide-react"
-import { use, useState } from "react";
+"use client";
+import { UsersDataTable } from "@/components/users-data-table";
+import { Users } from "lucide-react";
+import HolaClient from "@/components/hola-client";
+
 export default function Home() {
-const [respuesta, setRespuesta] = useState<string>("");
- const llamarJava = async () => {
-    try {
-      //const res = await fetch("http://service-shadcn-data-table-clone.pluaj-dev-dev.svc.cluster.local:8082/");
-      const res = await fetch("https://route-shadcn-data-table-clone-pluaj-dev-dev.apps.rm3.7wse.p1.openshiftapps.com/");
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      const text = await res.text();
-      setRespuesta(text);
-    } catch (err) {
-      setRespuesta("Error: " + String(err));
-    }
-  };
   return (
     <main className="min-h-screen bg-gradient-to-br from-background via-background to-secondary/20">
       <div className="container mx-auto px-4 py-12">
-         <div>
-        <Button onClick={llamarJava} className="btn">Llamar servicio 2  Java</Button>
-        <pre>{respuesta}</pre>
-      </div>
-
         <div className="mb-10">
           <div className="flex items-center gap-3 mb-3">
             <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
@@ -37,8 +20,9 @@ const [respuesta, setRespuesta] = useState<string>("");
         </div>
         <div className="rounded-xl border bg-card shadow-sm">
           <UsersDataTable />
+          <HolaClient />
         </div>
       </div>
     </main>
-  )
+  );
 }
