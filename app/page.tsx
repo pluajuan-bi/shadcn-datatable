@@ -12,14 +12,12 @@ export default function Home() {
             <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10">
               <Users className="h-6 w-6 text-primary" />
             </div>
-            <h1 className="text-4xl font-bold tracking-tight text-balance">Gestión de Usuarios</h1>
+            <h1 className="text-4xl font-bold tracking-tight text-balance">OpenShit Prueba Servicios </h1>
           </div>
-          <p className="text-lg text-muted-foreground max-w-2xl text-pretty">
-            Administra tu base de datos de usuarios de forma simple y eficiente
-          </p>
+          
         </div>
         <div className="rounded-xl border bg-card shadow-sm">
-          <UsersDataTable />
+
           <HolaClient />
         </div>
       </div>
