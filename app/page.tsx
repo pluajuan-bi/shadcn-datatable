@@ -7,7 +7,7 @@ export default function Home() {
 const [respuesta, setRespuesta] = useState<string>("");
  const llamarJava = async () => {
     try {
-      const res = await fetch("https://service-shadcn-data-table-clone.pluaj-dev-dev.svc.cluster.local:8082/");
+      const res = await fetch("http://service-shadcn-data-table-clone.pluaj-dev-dev.svc.cluster.local:8082/");
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const text = await res.text();
       setRespuesta(text);
