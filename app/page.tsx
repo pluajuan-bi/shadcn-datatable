@@ -19,7 +19,7 @@ const [respuesta, setRespuesta] = useState<string>("");
     <main className="min-h-screen bg-gradient-to-br from-background via-background to-secondary/20">
       <div className="container mx-auto px-4 py-12">
          <div>
-        <Button onClick={llamarJava} className="btn">Llamar servicio  Java</Button>
+        <Button onClick={llamarJava} className="btn">Llamar servicio 2  Java</Button>
         <pre>{respuesta}</pre>
       </div>
 
