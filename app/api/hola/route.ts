@@ -1,7 +1,8 @@
 export async function GET() {
   try {
     // Internal service address inside the OpenShift cluster
-    const backendUrl = "http://service-shadcn-data-table-clone.pluaj-dev-dev.svc.cluster.local:8082/";
+    const backendUrl = "http://service-microservicio-1.pluaj-dev-dev.svc.cluster.local:8082/";
+    
     const res = await fetch(backendUrl, { cache: "no-store" });
     const text = await res.text();
 
